@@ -10,17 +10,40 @@ int main(void)
     int menu = 0;
     while(menu != 3)
     {
-        //prompt user for option, 1 to 3
         printf("Press 1 to play a game\n");
         printf("Press 2 to change the max number\n");
         printf("Press 3 to quit\n");
-        
 
-    //add game here option 1
-    //make random number from 1 to 10
-    //prompt user for number
-    //tell user if too high or low
-    // loop until win or "q"
+        //prompt user for option, 1 to 3
+        
+        scanf("%d", &menu);
+        int maxNum = 10;
+
+        //add game here option 1
+        time_t  t;
+        srand((unsigned)  time(&t));
+        int gameNum = rand()  %  maxNum + 1;//random number from 1 to maxNum
+        if(menu == 1)
+        {
+            printf("You have chosen option: 1, Number Guessing Game\n" );
+            
+            int choice = 0;
+            while(choice != gameNum)
+            {
+                printf("Enter a number between 1-10\n");
+                if(scanf("%d", &choice) == 1)
+                {
+                    
+                }
+
+            }
+
+        }
+
+        //make random number from 1 to 10
+        //prompt user for number
+        //tell user if too high or low
+        // loop until win or "q"
 
 
     //add option 2, change max number
