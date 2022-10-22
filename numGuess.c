@@ -33,8 +33,22 @@ int main(void)
                 printf("Enter a number between 1-10\n");
                 if(scanf("%d", &choice) == 1)
                 {
-                    
+                    if(choice == gameNum)
+                    {
+                        printf("Number was guessed correct!\n");
+                    }
+                    else if(choice > gameNum)
+                    {
+                        printf("Number is wrong, too high\n")
+
+                    }
+                    else
+                    {
+                        printf("Number is wrong, too low\n")
+
+                    }
                 }
+                else if(choice)
 
             }
 
