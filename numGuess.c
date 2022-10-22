@@ -3,19 +3,23 @@
 #include  <time.h> 
 #include  <stdio.h>
 #include <ctype.h>
-//file to be used to store maxNum:
-//read file for new current maxNum
-//FILE *fp;
-//fp = fopen("maxNum.txt", "w+");
+#include <string.h>
 
-//fclose(fp);
-
-int maxNum = 10;
 
 
 //add main
 int main(void)
 {
+    //file to be used to store maxNum:
+    //read file for new current maxNum
+    FILE *fileP;
+    char numRead[10];
+    fileP = fopen("maxNum.txt", "r");
+    scanf("%s", fgets(numRead,10,fileP));
+
+    fclose(fileP);
+
+    int maxNum = atoi(numRead);//convert string to int
     //display menu
     int menu = 0;
     while(menu != 3)
