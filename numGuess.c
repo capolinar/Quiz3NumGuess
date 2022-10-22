@@ -4,6 +4,8 @@
 #include  <stdio.h>
 #include <ctype.h>
 
+//int maxNum = 10;
+
 //add main
 int main(void)
 {
@@ -40,7 +42,6 @@ int main(void)
                 scanf("%s", cTest);//input as string
                 
 
-                printf("entered: %d", choice);
                 if(cTest[0] == 'q')//quit
                 {
                     break;
@@ -49,8 +50,8 @@ int main(void)
                 {
                     choice = atoi(cTest);//convert string to int
                     //code to validate input
-                    //printf("\nGame Number: %d\n", gameNum );
-                    //printf("\nInput Number: %d\n", choice );
+                    printf("\nGame Number: %d\n", gameNum );
+                    printf("\nInput Number: %d\n", choice );
                     if(choice == gameNum)
                     {
                         printf("\nNumber was guessed correct!\n");
