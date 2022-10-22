@@ -100,6 +100,7 @@ int main(void)
     //display, thank user for playing and end program
 
     }
+    printf("Thanks for playing!\n");
     
 
 
