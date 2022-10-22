@@ -3,8 +3,15 @@
 #include  <time.h> 
 #include  <stdio.h>
 #include <ctype.h>
+//file to be used to store maxNum:
+//read file for new current maxNum
+//FILE *fp;
+//fp = fopen("maxNum.txt", "w+");
+
+//fclose(fp);
 
 int maxNum = 10;
+
 
 //add main
 int main(void)
@@ -104,6 +111,18 @@ int main(void)
     printf("Thanks for playing!\n");
 
     printf("Current maxNumber: %d", maxNum);
+    //new branch:
+    //open file
+    //write maxNum
+    //close file
+    char str[10];
+    sprintf(str, "%d", maxNum);
+    FILE *fp;
+    fp = fopen("maxNum.txt", "w+");
+    fputs(str,fp);
+
+
+    fclose(fp);
     
 
 
