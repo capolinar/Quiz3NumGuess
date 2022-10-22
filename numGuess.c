@@ -4,6 +4,8 @@
 #include  <stdio.h>
 #include <ctype.h>
 
+int maxNum = 10;
+
 //add main
 int main(void)
 {
@@ -18,7 +20,7 @@ int main(void)
         //prompt user for option, 1 to 3
         
         scanf("%d", &menu);
-        int maxNum = 10;
+        
 
         //add game here option 1
         time_t  t;
