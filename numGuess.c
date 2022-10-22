@@ -2,6 +2,7 @@
 #include <stdlib.h> 
 #include  <time.h> 
 #include  <stdio.h>
+#include <ctype.h>
 
 //add main
 int main(void)
@@ -10,7 +11,7 @@ int main(void)
     int menu = 0;
     while(menu != 3)
     {
-        printf("Press 1 to play a game\n");
+        printf("\nPress 1 to play a game\n");
         printf("Press 2 to change the max number\n");
         printf("Press 3 to quit\n");
 
@@ -27,34 +28,40 @@ int main(void)
         {
             printf("You have chosen option: 1, Number Guessing Game\n" );
             
-            int choice = 0;
+            int choice;
+            char cTest[5] = "0";
             while(choice != gameNum)
             {
                 printf("Enter a number between 1-10\n");
-                if(scanf("%d", &choice) == 1)
-                {
-                    if(choice == gameNum)
-                    {
-                        printf("Number was guessed correct!\n");
-                    }
-                    else if(choice > gameNum)
-                    {
-                        printf("Number is wrong, too high\n")
+                scanf("%s", cTest);//input as string
+                
 
-                    }
-                    else
-                    {
-                        printf("Number is wrong, too low\n")
-
-                    }
-                }
-                else if(choice == 'f')
+                printf("entered: %d", choice);
+                if(cTest[0] == 'q')//quit
                 {
                     break;
                 }
                 else
                 {
-                    printf("Not a number or f\n");
+                    choice = atoi(cTest);//convert string to int
+                    //code to validate input
+                    //printf("\nGame Number: %d\n", gameNum );
+                    //printf("\nInput Number: %d\n", choice );
+                    if(choice == gameNum)
+                    {
+                        printf("\nNumber was guessed correct!\n");
+                    }
+                    else if(choice > gameNum)
+                    {
+                        printf("\nNumber is wrong, too high\n");
+
+                    }
+                    else
+                    {
+                        printf("\nNumber is wrong, too low\n");
+                        
+
+                    }
                 }
 
             }
