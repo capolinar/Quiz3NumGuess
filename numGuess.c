@@ -15,7 +15,7 @@ int main(void)
     FILE *fileP;
     char numRead[10];
     fileP = fopen("maxNum.txt", "r");
-    scanf("%s", fgets(numRead,10,fileP));
+    fgets(numRead,10,fileP);
 
     fclose(fileP);
 
