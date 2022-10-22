@@ -1,8 +1,12 @@
 //add headers here
+#include <stdlib.h> 
+#include  <time.h> 
+#include  <stdio.h>
 
 //add main
-
-//display menu
+int main(void)
+{
+    //display menu
 
 //prompt user for option, 1 to 3
 
@@ -25,3 +29,9 @@
 //return success
 
 /////////////////******new branch, save max number request for next time?
+
+    return EXIT_SUCCESS;
+
+}
+
+
