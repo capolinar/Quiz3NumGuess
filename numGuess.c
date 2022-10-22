@@ -30,6 +30,10 @@ int main(void)
             
             int choice;
             char cTest[5] = "0";
+            //make random number from 1 to 10
+             //prompt user for number
+             //tell user if too high or low
+             // loop until win or "q"
             while(choice != gameNum)
             {
                 printf("Enter a number between 1-10\n");
@@ -67,18 +71,30 @@ int main(void)
             }
 
         }
-
-        //make random number from 1 to 10
-        //prompt user for number
-        //tell user if too high or low
-        // loop until win or "q"
-
-
-    //add option 2, change max number
+        //add option 2, change max number
     //display, tell user max number, no negatives
     //prompt user for number
     //check if number is valid
     //go back to menu
+        else if(menu == 2)
+        {
+            printf("You have chosen option 2, change max number\n");
+            printf("Max number to enter is 1000\n");//integer max
+            printf("No negatives allowed!\n");
+            int newMax;
+            scanf(" %d", &newMax);
+            while(newMax > 1000 || newMax < 0 )
+            {
+                printf("Number not valid! Enter again: \n");
+                scanf(" %d", &newMax);
+            }
+            maxNum = newMax;
+        }
+
+        
+
+
+    
 
     //add option 3, quit
     //display, thank user for playing and end program
