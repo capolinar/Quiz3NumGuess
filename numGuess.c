@@ -48,7 +48,14 @@ int main(void)
 
                     }
                 }
-                else if(choice)
+                else if(choice == 'f')
+                {
+                    break;
+                }
+                else
+                {
+                    printf("Not a number or f\n");
+                }
 
             }
 
