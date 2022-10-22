@@ -42,7 +42,6 @@ int main(void)
                 scanf("%s", cTest);//input as string
                 
 
-                printf("entered: %d", choice);
                 if(cTest[0] == 'q')//quit
                 {
                     break;
@@ -103,6 +102,8 @@ int main(void)
 
     }
     printf("Thanks for playing!\n");
+
+    printf("Current maxNumber: %d", maxNum);
     
 
 
