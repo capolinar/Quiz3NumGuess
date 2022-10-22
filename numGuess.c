@@ -50,8 +50,8 @@ int main(void)
                 {
                     choice = atoi(cTest);//convert string to int
                     //code to validate input
-                    printf("\nGame Number: %d\n", gameNum );
-                    printf("\nInput Number: %d\n", choice );
+                    //printf("\nGame Number: %d\n", gameNum );
+                    //printf("\nInput Number: %d\n", choice );
                     if(choice == gameNum)
                     {
                         printf("\nNumber was guessed correct!\n");
