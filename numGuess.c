@@ -38,7 +38,7 @@ int main(void)
              // loop until win or "q"
             while(choice != gameNum)
             {
-                printf("Enter a number between 1-10\n");
+                printf("Enter a number between 1-%d\n", maxNum);
                 scanf("%s", cTest);//input as string
                 
 
